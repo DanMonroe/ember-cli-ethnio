@@ -1,46 +1,21 @@
 # ember-cli-ethnio
 
-Plugin for ember-cli that injects [Ethnio](https://ethn.io) advanced research management into your application.
-
-Ethnio is an research recruiting tool for intercepting people that use your interface from your web site or app, and then conducting some kind of research with them - moderated or automated - and scheduling them or paying them incentives automatically if you'd like. You can also email or tweet or post a link to an ethnio screener, but most people place our JavaScript on their site. Ethnio is not a recruiting agency or research consulting firm.
+This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
 
-To install simply run:
+* `git clone <repository-url>` this repository
+* `cd ember-cli-ethnio`
+* `npm install`
 
-```
-ember install ember-cli-ethnio
-```
+## Running
 
-## Usage
-
-Once configured, the Ethnio screener code will be injected into your index.html file.
-
-## Configuration
-
-This plugin uses the Ember CLI project's configuration as defined in `config/environment.js`.
-
-The Ethnio code will appear only if `ENV.ethnioConfig.enabled` is defined and is set to true. For instance, to enable the Ethnio in only the production environment:
-
-```javascript
-if (environment === 'production') {
-  ENV.ethnioConfig = {
-    enabled: true,
-    screenerNumber: 12345
-  };
-}
-```
-
-### Configuration Parameters
-
-* `enabled` (Default: `false`): Whether or not the feature is enabled.
-* `screenerNumber` (Default: `null`): the number of the screener survey you wish to display.
-* `screenerNumber` (Default: `'//ethn.io/'`): The host location of the Ethnio scripts
+* `ember serve`
+* Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ## Running Tests
 
-* `git clone git@github.com:danmonroe/ember-cli-ethnio.git`
-* `npm install`
+* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
 * `ember test`
 * `ember test --server`
 
@@ -48,4 +23,4 @@ if (environment === 'production') {
 
 * `ember build`
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
