@@ -1,21 +1,44 @@
 # ember-cli-ethnio
 
-This README outlines the details of collaborating on this Ember addon.
+Plugin for ember-cli that injects [Ethnio](https://ethn.io) advanced research management into your application.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-cli-ethnio`
-* `npm install`
+To install simply run:
 
-## Running
+```
+ember install ember-cli-ethnio
+```
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+## Usage
+
+Once configured, the Ethnio screener code will be injected into your index.html file.
+
+## Configuration
+
+This plugin uses the Ember CLI project's configuration as defined in `config/environment.js`.
+
+The Ethnio code will appear only if `ENV.ethnioConfig.enabled` is defined and is set to true. For instance, to enable the Ethnio in only the production environment:
+
+```javascript
+if (environment === 'production') {
+  ENV.ethnioConfig = {
+    enabled: true,
+    screenerNumber: 12345
+  };
+}
+```
+
+### Configuration Parameters
+
+* `enabled` (Default: `false`): Whether or not the feature is enabled.
+* `screenerNumber` (Default: `null`): the number of the screener survey you wish to display.
+* `screenerNumber` (Default: `'//ethn.io/'`): The host location of the Ethnio scripts
 
 ## Running Tests
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
+* `git clone git@github.com:danmonroe/ember-cli-ethnio.git`
+* `npm install`
 * `ember test`
 * `ember test --server`
 
@@ -23,4 +46,4 @@ This README outlines the details of collaborating on this Ember addon.
 
 * `ember build`
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
