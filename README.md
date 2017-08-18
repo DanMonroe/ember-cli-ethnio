@@ -33,7 +33,7 @@ if (environment === 'production') {
 
 * `enabled` (Default: `false`): Whether or not the feature is enabled.
 * `screenerNumber` (Default: `null`): the number of the screener survey you wish to display.
-* `screenerNumber` (Default: `'//ethn.io/'`): The host location of the Ethnio scripts
+* `host` (Default: `'//ethn.io/'`): The host location of the Ethnio scripts
 
 ## Running Tests
 
