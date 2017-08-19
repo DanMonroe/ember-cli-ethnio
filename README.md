@@ -24,7 +24,7 @@ The Ethnio code will appear only if `ENV.ethnioConfig.enabled` is defined and is
 if (environment === 'production') {
   ENV.ethnioConfig = {
     enabled: true,
-    screenerNumber: 12345
+    screenerNumber: 11111
   };
 }
 ```
